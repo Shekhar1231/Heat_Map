@@ -1,0 +1,79 @@
+﻿body, html {
+    min-height: 100%;
+    height: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:white;
+}
+
+html, body {
+    margin:0;
+    width: 100%;
+    background-image: url("../Images/Statements1-Wallpapers-16-9.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sidenav {
+    height: 50%;
+    width: 200px;
+    position: fixed;
+    background-color: #111;
+    overflow-x: hidden;
+    margin: 0.5em 0 0 1em;
+    display: none;
+    transition: 4s;
+}
+.sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+
+    }
+.sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+
+
+.nav div
+{
+    height:4px;
+    background-color:orangered;
+    margin:5px 0;
+    border-radius:25px;
+    transition:0.4s;
+}
+.nav{
+    width: 30px;
+    display:block;
+    margin:1em 0 0 1em;
+}
+.one {
+    width: 30px;
+}
+.two{
+    width:20px;
+}
+.three{
+    width:25px;
+}
+
+.nav:hover div
+{
+    width:30px;
+
+}
+
+#forgeViewer {
+    width: 100%;
+}
+
