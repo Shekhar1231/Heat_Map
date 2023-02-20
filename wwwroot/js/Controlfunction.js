@@ -13,19 +13,23 @@
         }
     });
 
-    $('#UploadModel').click(function () {
-
-
-        document.getElementById("RevitFile").click();
-        
-        const file = document.getElementById("RevitFile").files[0];
+    const upload = document.getElementById("UploadModel");
+    const input = document.getElementById("RevitFile");
+    upload.onclick = () => input.click();
+    input.onchange = async () => {
+        const file = input.files[0];
         let data = new FormData();
-        data.append('model-file', file);
-        let res = await fetch("oss/api/forge/oss/objects", { method: 'POST', body: data });
-       
-
-
-    });
+        data.append('fileToUpload', file);
+        upload.setAttribute('disabled', true);
+        try {
+            const resp = await fetch('api/forge/oss/objects', { method: 'POST', body: data });
+            if (!resp.ok) {
+                throw new Error(await resp.text());
+            }
+        } catch (e) {
+            upload.removeAttribute('disabled');            
+        }
+    }
 
 });
         
