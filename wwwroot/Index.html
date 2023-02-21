@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/themes/default/style.min.css" />
     <!-- Autodesk Forge Viewer files -->
     <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" type="text/css">
-    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
-
+    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.js"></script>
     <link href="css/Main.css" rel="stylesheet" />
-    <script src="js/Controlfunction.js"></script>
+    <script src="js/Controlfunction.js" type="module"></script>
 </head>
 <body>
+    
+
     <div class="wrapper">
+
         <a href="#" id="Menubarbutton" class="nav">
             <div class="one"></div>
             <div class="two"></div>
@@ -28,9 +30,20 @@
             <a href="#" id="UploadModel">Upload Model</a>
             <a href="#">Contact</a>
         </div>
+        <div class="wrapper">
+            <span class="title">WSP Viewer</span>
+            <select id="FileName" name="Name" />
+            <button id="translateModel" title="Upload New Model">Translate</button>
+
+            <!--<input style="display: none" type="file" id="input">-->
+        </div>
+        <div id="preview"></div>
+        <div id="overlay"></div>
+
     </div>
 
-   
+
+
 
 
 
