@@ -3,11 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <title>WSP-Model Heat Map</title>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/jstree.min.js"></script>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/themes/default/style.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Autodesk Forge Viewer files -->
     <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" type="text/css">
     <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.js"></script>
@@ -15,38 +12,24 @@
     <script src="js/Controlfunction.js" type="module"></script>
 </head>
 <body>
-    
-
     <div class="wrapper">
+            <a id="Menubarbutton" class="nav">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </a>
+            <div class="sidenav" id="MenuPanel">
+                <a>About</a>
+                <a id="UploadRevitFile">Upload Model</a>
+                <input style="display: none" type="file" id="input">
+                <a>Contact</a>
+            </div>
 
-        <a href="#" id="Menubarbutton" class="nav">
-            <div class="one"></div>
-            <div class="two"></div>
-            <div class="three"></div>
-        </a>
-        <div href="#" class="sidenav" id="MenuPanel">
-            <a href="#">About</a>
-            <input type="file" id="RevitFile" style="display:none">
-            <a href="#" id="UploadModel">Upload Model</a>
-            <a href="#">Contact</a>
-        </div>
-        <div class="wrapper">
-            <span class="title">WSP Viewer</span>
-            <select id="FileName" name="Name" />
-            <button id="translateModel" title="Upload New Model">Translate</button>
-
-            <!--<input style="display: none" type="file" id="input">-->
-        </div>
-        <div id="preview"></div>
-        <div id="overlay"></div>
-
+            <div>
+                <span class="title">WSP Viewer</span>
+                <select id="RevitFile" name="RevitFile"></select>
+                <button id="translateModel">Translate</button>
+            </div>
     </div>
-
-
-
-
-
-
-
 </body>
 </html>

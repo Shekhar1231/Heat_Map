@@ -1,9 +1,8 @@
-﻿/// import * as Autodesk from "@types/forge-viewer";
-
-async function getAccessToken(callback) {
+﻿async function getAccessToken(callback) {
     try {
         const resp = await fetch('/api/auth/token');
-        if (!resp.ok) {
+        if (!resp.ok)
+        {
             throw new Error(await resp.text());
         }
         const { access_token, expires_in } = await resp.json();
@@ -14,7 +13,8 @@ async function getAccessToken(callback) {
     }
 }
 
-export function initViewer(container) {
+export function initViewer(container)
+{
     return new Promise(function (resolve, reject) {
         Autodesk.Viewing.Initializer({ getAccessToken }, function () {
             const config = {
@@ -39,4 +39,4 @@ export function loadModel(viewer, urn) {
         viewer.setLightPreset(0);
         Autodesk.Viewing.Document.load('urn:' + urn, onDocumentLoadSuccess, onDocumentLoadFailure);
     });
-}
+}   

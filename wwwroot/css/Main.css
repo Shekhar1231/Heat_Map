@@ -74,6 +74,17 @@ html, body {
     padding: 1em;
     display: none;
 }
+#header > * {
+    height: 2em;
+    margin: 0 0.5em;
+    font-size: 1em;
+    font-family: ArtifaktElement;
+}
+
+#header .title {
+    flex: 1 0 auto;
+    height: auto;
+}
 .nav div
 {
     height:4px;

@@ -12,10 +12,11 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
-        "FORGE_CALLBACK_URL": "http://localhost:3000/api/forge/callback/oauth",
-        "FORGE_CLIENT_SECRET": "Z0jzGAiY4GB1aAL8",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "APS_CALLBACK_URL": "http://localhost:3000/api/forge/callback/oauth",
+        "APS_CLIENT_SECRET": "Z0jzGAiY4GB1aAL8",
         "ASPNETCORE_URLS": "http://localhost:3000",
-        "FORGE_CLIENT_ID": "mghFMmiEU1oqhRZYv4skc04VTX5JNo3D"
+        "APS_CLIENT_ID": "mghFMmiEU1oqhRZYv4skc04VTX5JNo3D"
       },
       "ErrorString": "Invalid property identifier character: {. Path '', line 2, position 2."
     }
